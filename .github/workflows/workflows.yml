@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Extract Tag
         id: get_tag
-        uses: ./.github/actions/extract-tag  # 경로 수정
+        uses: ./.github/actions  # 경로 수정
       - name: Use Extracted Tag
         run: echo "The extracted tag is ${{ steps.get_tag.outputs.tag }}"
