@@ -1,10 +1,12 @@
-name: 'Extract Tag'
-description: 'Extracts the tag from GITHUB_REF'
-inputs:
-# 입력 파라미터 정의(예제에서는 사용하지 않음)
+name: Get tag
+description: Get tag from GITHUB_REF environment variable
+branding:
+  icon: tag
+  color: purple
 outputs:
   tag:
-    description: 'The extracted tag'
+    description: The name of the git tag extracted from GITHUB_REF.
+
 runs:
-  using: 'node18'
-  main: 'main.js'
+  using: node18
+  main: main.js
