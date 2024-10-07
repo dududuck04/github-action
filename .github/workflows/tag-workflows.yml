@@ -1,0 +1,10 @@
+name: 'Extract Tag'
+description: 'Extracts the tag from GITHUB_REF'
+inputs:
+# 입력 파라미터 정의(예제에서는 사용하지 않음)
+outputs:
+  tag:
+    description: 'The extracted tag'
+runs:
+  using: 'node18'
+  main: 'main.js'
