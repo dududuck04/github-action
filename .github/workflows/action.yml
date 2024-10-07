@@ -1,4 +1,10 @@
 name: Get tag
+
+on:
+  push:
+    tags:
+      - '*'
+
 description: Get tag from GITHUB_REF environment variable
 branding:
   icon: tag
