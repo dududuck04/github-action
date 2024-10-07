@@ -8,5 +8,5 @@ outputs:
     description: The name of the git tag extracted from GITHUB_REF.
 
 runs:
-  using: node18
+  using: node16
   main: main.js
