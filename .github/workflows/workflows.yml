@@ -10,8 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./.github/actions
       - name: Extract Tag
         id: get_tag
-        uses: ./.github/actions  # 경로 수정
+        uses: ./.github/actions
       - name: Use Extracted Tag
         run: echo "The extracted tag is ${{ steps.get_tag.outputs.tag }}"
