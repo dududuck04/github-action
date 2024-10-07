@@ -1,0 +1,17 @@
+name: Deploy on Tag
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Extract Tag
+        id: get_tag
+        uses: ./.github/workflows/tag-workflows
+      - name: Use Extracted Tag
+        run: echo "The extracted tag is ${{ steps.get_tag.outputs.tag }}"
